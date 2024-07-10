@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/my_executable.dir/maina1.cpp.obj"
-  "CMakeFiles/my_executable.dir/maina1.cpp.obj.d"
+  "CMakeFiles/my_executable.dir/main24b1.cpp.obj"
+  "CMakeFiles/my_executable.dir/main24b1.cpp.obj.d"
   "libmy_executable.dll.a"
   "my_executable.exe"
   "my_executable.exe.manifest"

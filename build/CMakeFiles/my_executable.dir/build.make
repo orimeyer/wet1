@@ -68,28 +68,28 @@ include CMakeFiles/my_executable.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/my_executable.dir/flags.make
 
-CMakeFiles/my_executable.dir/maina1.cpp.obj: CMakeFiles/my_executable.dir/flags.make
-CMakeFiles/my_executable.dir/maina1.cpp.obj: ../maina1.cpp
-CMakeFiles/my_executable.dir/maina1.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_executable.dir/maina1.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/maina1.cpp.obj -MF CMakeFiles\my_executable.dir\maina1.cpp.obj.d -o CMakeFiles\my_executable.dir\maina1.cpp.obj -c C:\wet1\maina1.cpp
+CMakeFiles/my_executable.dir/main24b1.cpp.obj: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/main24b1.cpp.obj: ../main24b1.cpp
+CMakeFiles/my_executable.dir/main24b1.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_executable.dir/main24b1.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/main24b1.cpp.obj -MF CMakeFiles\my_executable.dir\main24b1.cpp.obj.d -o CMakeFiles\my_executable.dir\main24b1.cpp.obj -c C:\wet1\main24b1.cpp
 
-CMakeFiles/my_executable.dir/maina1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/maina1.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\maina1.cpp > CMakeFiles\my_executable.dir\maina1.cpp.i
+CMakeFiles/my_executable.dir/main24b1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/main24b1.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\main24b1.cpp > CMakeFiles\my_executable.dir\main24b1.cpp.i
 
-CMakeFiles/my_executable.dir/maina1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/maina1.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\maina1.cpp -o CMakeFiles\my_executable.dir\maina1.cpp.s
+CMakeFiles/my_executable.dir/main24b1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/main24b1.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\main24b1.cpp -o CMakeFiles\my_executable.dir\main24b1.cpp.s
 
 # Object files for target my_executable
 my_executable_OBJECTS = \
-"CMakeFiles/my_executable.dir/maina1.cpp.obj"
+"CMakeFiles/my_executable.dir/main24b1.cpp.obj"
 
 # External object files for target my_executable
 my_executable_EXTERNAL_OBJECTS =
 
-my_executable.exe: CMakeFiles/my_executable.dir/maina1.cpp.obj
+my_executable.exe: CMakeFiles/my_executable.dir/main24b1.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/build.make
 my_executable.exe: CMakeFiles/my_executable.dir/linklibs.rsp
 my_executable.exe: CMakeFiles/my_executable.dir/objects1.rsp

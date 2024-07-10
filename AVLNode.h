@@ -15,7 +15,7 @@ public:
     T* getData() const {
         return data;
     }
-
+    
     void setData(T* newData) {
         data = newData;
     }

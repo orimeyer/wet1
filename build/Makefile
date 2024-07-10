@@ -128,29 +128,29 @@ my_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/build
 .PHONY : my_executable/fast
 
-maina1.obj: maina1.cpp.obj
-.PHONY : maina1.obj
+main24b1.obj: main24b1.cpp.obj
+.PHONY : main24b1.obj
 
 # target to build an object file
-maina1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/maina1.cpp.obj
-.PHONY : maina1.cpp.obj
+main24b1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main24b1.cpp.obj
+.PHONY : main24b1.cpp.obj
 
-maina1.i: maina1.cpp.i
-.PHONY : maina1.i
+main24b1.i: main24b1.cpp.i
+.PHONY : main24b1.i
 
 # target to preprocess a source file
-maina1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/maina1.cpp.i
-.PHONY : maina1.cpp.i
+main24b1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main24b1.cpp.i
+.PHONY : main24b1.cpp.i
 
-maina1.s: maina1.cpp.s
-.PHONY : maina1.s
+main24b1.s: main24b1.cpp.s
+.PHONY : main24b1.s
 
 # target to generate assembly for a file
-maina1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/maina1.cpp.s
-.PHONY : maina1.cpp.s
+main24b1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main24b1.cpp.s
+.PHONY : main24b1.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... my_executable
-	@echo ... maina1.obj
-	@echo ... maina1.i
-	@echo ... maina1.s
+	@echo ... main24b1.obj
+	@echo ... main24b1.i
+	@echo ... main24b1.s
 .PHONY : help
 
 

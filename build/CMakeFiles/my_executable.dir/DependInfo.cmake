@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/wet1/maina1.cpp" "CMakeFiles/my_executable.dir/maina1.cpp.obj" "gcc" "CMakeFiles/my_executable.dir/maina1.cpp.obj.d"
+  "C:/wet1/main24b1.cpp" "CMakeFiles/my_executable.dir/main24b1.cpp.obj" "gcc" "CMakeFiles/my_executable.dir/main24b1.cpp.obj.d"
   )
 
 # Targets to which this target links.

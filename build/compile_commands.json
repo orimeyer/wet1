@@ -1,7 +1,7 @@
 [
 {
   "directory": "C:/wet1/build",
-  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -o CMakeFiles\\my_executable.dir\\maina1.cpp.obj -c C:\\wet1\\maina1.cpp",
-  "file": "C:/wet1/maina1.cpp"
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -o CMakeFiles\\my_executable.dir\\main24b1.cpp.obj -c C:\\wet1\\main24b1.cpp",
+  "file": "C:/wet1/main24b1.cpp"
 }
 ]
