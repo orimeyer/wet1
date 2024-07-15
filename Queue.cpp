@@ -1,5 +1,4 @@
 #include "Queue.h"
-#include <stdexcept>
 
 // Constructor
 Queue::Queue() : head(nullptr), tail(nullptr) {}
@@ -18,15 +17,13 @@ void Queue::enqueue(int value) {
         head = tail = newNode;
     } else {
         tail->setNext(newNode);
+        newNode->setPrev(tail);
         tail = newNode;
     }
 }
 
 // Check the number at the head of the queue without removing it
 int Queue::peek() const {
-    if (isEmpty()) {
-        throw std::out_of_range("Queue is empty");
-    }
     return head->getData();
 }
 
@@ -39,8 +36,42 @@ void Queue::dequeue() {
     head = head->getNext();
     if (head == nullptr) {
         tail = nullptr;
+    } else {
+        head->setPrev(nullptr);
     }
     delete temp;
+}
+
+// Remove a node given its pointer
+void Queue::removeNode(Node* node) {
+    if (isEmpty() || node == nullptr) {
+        return; // Do nothing if the queue is empty or node is null
+    }
+
+    if (node == head) {
+        dequeue(); // If the node to remove is the head, use dequeue
+        return;
+    }
+
+    if (node == tail) {
+        tail = node->getPrev();
+        tail->setNext(nullptr);
+        delete node;
+        return;
+    }
+
+    Node* prevNode = node->getPrev();
+    Node* nextNode = node->getNext();
+
+    if (prevNode != nullptr) {
+        prevNode->setNext(nextNode);
+    }
+
+    if (nextNode != nullptr) {
+        nextNode->setPrev(prevNode);
+    }
+
+    delete node;
 }
 
 // Check if the queue is empty

@@ -79,11 +79,22 @@ StatusType Ocean::remove_pirate(int pirateId)
 	}
 	Pirate* pirate_to_delete = main_pirates_tree.find(pirateId)->getData();
     pirate_to_delete->getPointerToQueue()->setData(-1);
+    Ship* its_ship = pirate_to_delete->getPointerToShip();
+    AVLTree<Pair, Pirate> PiratesByTreasure = its_ship->getPiratesByTreasure();
+    its_ship->getPiratesById().remove(pirateId);
+    int its_treasure = pirate_to_delete->getTreasure();
+    PiratesByTreasure.remove(Pair(pirateId, its_treasure));
+    int num_pirates = its_ship->getNumOfPirates();
+    its_ship->setNumOfPirates(num_pirates - 1);
+    its_ship->setReachest(PiratesByTreasure.getMaxKey().getId());
+    main_pirates_tree.remove(pirateId);
 	return StatusType::SUCCESS;
 }
 
 StatusType Ocean::treason(int sourceShipId, int destShipId)
 {
+    Ship* source_ship = ships_tree.find(sourceShipId)->getData();
+    while
     return StatusType::FAILURE;
 }
 

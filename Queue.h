@@ -24,6 +24,9 @@ public:
     // Remove the node from the head of the queue
     void dequeue();
 
+    // Remove a node given its pointer
+    void removeNode(Node* node);
+
     // Check if the queue is empty
     bool isEmpty() const;
 
