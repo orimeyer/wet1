@@ -38,15 +38,15 @@ int Ship::getExtraCoins() const {
     return extra_coins;
 }
 
-const AVLTree<int, Pirate>& Ship::getPiratesById() const {
+AVLTree<int, Pirate>& Ship::getPiratesById(){
     return pirates_by_id;
 }
 
-const AVLTree<Pair, Pirate>& Ship::getPiratesByTreasure() const {
+AVLTree<Pair, Pirate>& Ship::getPiratesByTreasure(){
     return pirates_by_treasure;
 }
 
-const Queue& Ship::getPiratesByOrder() const {
+Queue& Ship::getPiratesByOrder(){
     return pirates_by_order;
 }
 

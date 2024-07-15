@@ -5,7 +5,6 @@
 
 class Queue {
 private:
-
     Node* head; // Points to the head of the queue
     Node* tail; // Points to the tail of the queue
 
@@ -28,6 +27,7 @@ public:
     // Check if the queue is empty
     bool isEmpty() const;
 
+    // Return the tail node
     Node* getTail() const;
 };
 

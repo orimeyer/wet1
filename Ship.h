@@ -31,9 +31,9 @@ public:
     int getNumOfPirates() const;
     int getReachest() const;
     int getExtraCoins() const;
-    const AVLTree<int, Pirate>& getPiratesById() const;
-    const AVLTree<Pair, Pirate>& getPiratesByTreasure() const;
-    const Queue& getPiratesByOrder() const;
+    AVLTree<int, Pirate>& getPiratesById();
+    AVLTree<Pair, Pirate>& getPiratesByTreasure();
+    Queue& getPiratesByOrder();
 
     // Setters
     void setShipId(int id);

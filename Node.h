@@ -2,11 +2,22 @@
 #define NODE_H
 
 class Node {
-public:
+private:
     int data;
     Node* next;
 
-    Node(int data) : data(data), next(nullptr) {}
+public:
+    // Constructor
+    Node(int data);
+
+    // Getters
+    int getData() const;
+    Node* getNext() const;
+
+    // Setters
+    void setData(int data);
+    void setNext(Node* next);
 };
 
 #endif // NODE_H
+
