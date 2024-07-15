@@ -43,3 +43,7 @@ void Queue::dequeue() {
 bool Queue::isEmpty() const {
     return head == nullptr;
 }
+
+Queue::Node* Queue::getTail() const {
+    return tail;
+}

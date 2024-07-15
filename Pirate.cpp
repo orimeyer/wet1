@@ -1,8 +1,19 @@
 #include "Pirate.h"
+#include "Ship.h" // Include after forward declaration
 
 // Constructor
-Pirate::Pirate(int pid, int sid, int treas)
-    : pirateId(pid), shipId(sid), treasure(treas) {}
+Pirate::Pirate(int pirateId, int shipId, int treasure)
+    : pirateId(pirateId), shipId(shipId), treasure(treasure), pointer_to_ship(nullptr), pointer_to_queue(nullptr) {}
+
+// Destructor
+Pirate::~Pirate() {
+    // Cleanup if necessary (e.g., if pointer_to_ship or pointer_to_queue need to be deleted)
+}
+
+// Copy constructor
+Pirate::Pirate(const Pirate& other)
+    : pirateId(other.pirateId), shipId(other.shipId), treasure(other.treasure),
+      pointer_to_ship(other.pointer_to_ship), pointer_to_queue(other.pointer_to_queue) {}
 
 // Getters
 int Pirate::getPirateId() const {
@@ -17,15 +28,31 @@ int Pirate::getTreasure() const {
     return treasure;
 }
 
+Ship* Pirate::getPointerToShip() const {
+    return pointer_to_ship;
+}
+
+Node* Pirate::getPointerToQueue() const {
+    return pointer_to_queue;
+}
+
 // Setters
-void Pirate::setPirateId(int pid) {
-    pirateId = pid;
+void Pirate::setPirateId(int pirateId) {
+    this->pirateId = pirateId;
 }
 
-void Pirate::setShipId(int sid) {
-    shipId = sid;
+void Pirate::setShipId(int shipId) {
+    this->shipId = shipId;
 }
 
-void Pirate::setTreasure(int treas) {
-    treasure = treas;
+void Pirate::setTreasure(int treasure) {
+    this->treasure = treasure;
+}
+
+void Pirate::setPointerToShip(Ship* pointer_to_ship) {
+    this->pointer_to_ship = pointer_to_ship;
+}
+
+void Pirate::setPointerToQueue(Node* pointer_to_queue) {
+    this->pointer_to_queue = pointer_to_queue;
 }

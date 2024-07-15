@@ -1,14 +1,10 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+#include "Node.h"
+
 class Queue {
 private:
-    // Node structure for the linked list
-    struct Node {
-        int data;
-        Node* next;
-        Node(int data) : data(data), next(nullptr) {}
-    };
 
     Node* head; // Points to the head of the queue
     Node* tail; // Points to the tail of the queue
@@ -31,6 +27,8 @@ public:
 
     // Check if the queue is empty
     bool isEmpty() const;
+
+    Node* getTail() const;
 };
 
 #endif // QUEUE_H
