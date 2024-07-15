@@ -184,6 +184,19 @@ private:
         }
     }
 
+    K getMaximumKey() const {
+        AVLNode<K, T>* current = root;
+        if (current == nullptr)
+            throw std::runtime_error("Tree is empty.");
+
+        // Traverse to the rightmost node
+        while (current->getRight() != nullptr) {
+            current = current->getRight();
+        }
+
+        return current->getKey();
+    }
+
 public:
     AVLTree() : root(nullptr), number_of_nodes(0) {}
 
@@ -217,6 +230,10 @@ public:
 
     int getNumberOfNodes() const {
         return number_of_nodes;
+    }
+
+    K getMaxKey() const {
+        return getMaximumKey();
     }
 };
 

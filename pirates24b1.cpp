@@ -14,17 +14,50 @@ Ocean::~Ocean()
 
 StatusType Ocean::add_ship(int shipId, int cannons)
 {
-    return StatusType::FAILURE;
+    if (shipId <=0 || cannons < 0){
+		return StatusType::INVALID_INPUT;
+	}
+	if (ships_tree.contains(shipId)){
+		return StatusType::FAILURE;
+	}
+	Ship* newShip = new Ship(shipId, cannons);
+    if (newShip == nullptr) {
+		delete newShip;
+        return StatusType::ALLOCATION_ERROR;
+    }
+	ships_tree.insert(shipId, newShip);
+	return StatusType::SUCCESS;
 }
 
 StatusType Ocean::remove_ship(int shipId)
 {
-    return StatusType::FAILURE;
+    if (shipId <= 0){
+		return StatusType::INVALID_INPUT;
+	}
+	if (!ships_tree.contains(shipId) || ships_tree.find(shipId)->getData()->getNumOfPirates() > 0){
+		return StatusType::FAILURE;
+	}
+	ships_tree.remove(shipId);
+	return StatusType::SUCCESS;
 }
 
 StatusType Ocean::add_pirate(int pirateId, int shipId, int treasure)
 {
-    return StatusType::FAILURE;
+    if (pirateId <=0 || shipId <= 0){
+		return StatusType::INVALID_INPUT;
+	}
+	if (main_pirates_tree.contains(pirateId) || (!ships_tree.contains(shipId))){
+		return StatusType::FAILURE;
+	}
+	Pirate* newPirate = new Pirate(pirateId, shipId, treasure);
+    if (newPirate == nullptr) {
+		delete newPirate;
+        return StatusType::ALLOCATION_ERROR;
+    }
+	main_pirates_tree.insert(pirateId, newPirate);
+    AVLNode<int, Ship>* shipNode = ships_tree.find(shipId);
+    shipNode->getData()->getPirates().insert(pirateId, newPirate);
+	return StatusType::SUCCESS;
 }
 
 StatusType Ocean::remove_pirate(int pirateId)
