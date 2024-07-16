@@ -1,6 +1,10 @@
 #include "pirates24b1.h"
 
-Ocean::Ocean()  {}
+Ocean::Ocean()
+{
+    main_pirates_tree = AVLTree<int, Pirate>();
+    ships_tree = AVLTree<int, Ship>();
+}
 
 Ocean::~Ocean() {}
 
