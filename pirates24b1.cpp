@@ -4,13 +4,11 @@
 
 Ocean::Ocean()
 {
-    
+    main_pirates_tree = AVLTree<int, Pirate>();
+    ships_tree = AVLTree<int, Ship>(); 
 }
 
-Ocean::~Ocean()
-{
-    
-}
+Ocean::~Ocean() {}
 
 StatusType Ocean::add_ship(int shipId, int cannons)
 {

@@ -17,6 +17,7 @@
 #include "AVLTree.h"
 #include "Ship.h"
 #include "Pirate.h"
+#include "Node.h"
 
 class Ocean {
 private:
