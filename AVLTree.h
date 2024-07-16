@@ -9,17 +9,21 @@ private:
     AVLNode<K, T>* root;
     int number_of_nodes;
 
-    int getHeight(AVLNode<K, T>* node) {
+    int max(int a, int b) {
+        return (a > b) ? a : b;
+    }
+
+    int height(AVLNode<K, T>* node) {
         return (node == nullptr) ? 0 : node->height;
     }
 
-    int getBalance(AVLNode<K, T>* node) {
-        return (node == nullptr) ? 0 : getHeight(node->left) - getHeight(node->right);
+    int balanceFactor(AVLNode<K, T>* node) {
+        return (node == nullptr) ? 0 : height(node->left) - height(node->right);
     }
 
     void updateHeight(AVLNode<K, T>* node) {
         if (node != nullptr) {
-            node->height = 1 + std::max(getHeight(node->left), getHeight(node->right));
+            node->height = 1 + max(height(node->left), height(node->right));
         }
     }
 
@@ -72,7 +76,7 @@ private:
 
         updateHeight(node);
 
-        int balance = getBalance(node);
+        int balance = balanceFactor(node);
 
         // Left Left Case
         if (balance > 1 && key < node->left->key) {
@@ -133,26 +137,26 @@ private:
 
         updateHeight(root);
 
-        int balance = getBalance(root);
+        int balance = balanceFactor(root);
 
         // Left Left Case
-        if (balance > 1 && getBalance(root->left) >= 0) {
+        if (balance > 1 && balanceFactor(root->left) >= 0) {
             return rotateRight(root);
         }
 
         // Left Right Case
-        if (balance > 1 && getBalance(root->left) < 0) {
+        if (balance > 1 && balanceFactor(root->left) < 0) {
             root->left = rotateLeft(root->left);
             return rotateRight(root);
         }
 
         // Right Right Case
-        if (balance < -1 && getBalance(root->right) <= 0) {
+        if (balance < -1 && balanceFactor(root->right) <= 0) {
             return rotateLeft(root);
         }
 
         // Right Left Case
-        if (balance < -1 && getBalance(root->right) > 0) {
+        if (balance < -1 && balanceFactor(root->right) > 0) {
             root->right = rotateRight(root->right);
             return rotateLeft(root);
         }
@@ -186,8 +190,6 @@ private:
 
     K getMaximumKey() const {
         AVLNode<K, T>* current = root;
-        if (current == nullptr)
-            throw std::runtime_error("Tree is empty.");
 
         // Traverse to the rightmost node
         while (current->getRight() != nullptr) {

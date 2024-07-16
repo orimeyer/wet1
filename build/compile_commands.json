@@ -1,6 +1,31 @@
 [
 {
   "directory": "C:/wet1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -o CMakeFiles\\my_executable.dir\\Pirate.cpp.obj -c C:\\wet1\\Pirate.cpp",
+  "file": "C:/wet1/Pirate.cpp"
+},
+{
+  "directory": "C:/wet1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -o CMakeFiles\\my_executable.dir\\Ship.cpp.obj -c C:\\wet1\\Ship.cpp",
+  "file": "C:/wet1/Ship.cpp"
+},
+{
+  "directory": "C:/wet1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -o CMakeFiles\\my_executable.dir\\Queue.cpp.obj -c C:\\wet1\\Queue.cpp",
+  "file": "C:/wet1/Queue.cpp"
+},
+{
+  "directory": "C:/wet1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -o CMakeFiles\\my_executable.dir\\Node.cpp.obj -c C:\\wet1\\Node.cpp",
+  "file": "C:/wet1/Node.cpp"
+},
+{
+  "directory": "C:/wet1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -o CMakeFiles\\my_executable.dir\\Pair.cpp.obj -c C:\\wet1\\Pair.cpp",
+  "file": "C:/wet1/Pair.cpp"
+},
+{
+  "directory": "C:/wet1/build",
   "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -o CMakeFiles\\my_executable.dir\\main24b1.cpp.obj -c C:\\wet1\\main24b1.cpp",
   "file": "C:/wet1/main24b1.cpp"
 }

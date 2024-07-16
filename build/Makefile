@@ -128,6 +128,126 @@ my_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/build
 .PHONY : my_executable/fast
 
+Node.obj: Node.cpp.obj
+.PHONY : Node.obj
+
+# target to build an object file
+Node.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Node.cpp.obj
+.PHONY : Node.cpp.obj
+
+Node.i: Node.cpp.i
+.PHONY : Node.i
+
+# target to preprocess a source file
+Node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Node.cpp.i
+.PHONY : Node.cpp.i
+
+Node.s: Node.cpp.s
+.PHONY : Node.s
+
+# target to generate assembly for a file
+Node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Node.cpp.s
+.PHONY : Node.cpp.s
+
+Pair.obj: Pair.cpp.obj
+.PHONY : Pair.obj
+
+# target to build an object file
+Pair.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Pair.cpp.obj
+.PHONY : Pair.cpp.obj
+
+Pair.i: Pair.cpp.i
+.PHONY : Pair.i
+
+# target to preprocess a source file
+Pair.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Pair.cpp.i
+.PHONY : Pair.cpp.i
+
+Pair.s: Pair.cpp.s
+.PHONY : Pair.s
+
+# target to generate assembly for a file
+Pair.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Pair.cpp.s
+.PHONY : Pair.cpp.s
+
+Pirate.obj: Pirate.cpp.obj
+.PHONY : Pirate.obj
+
+# target to build an object file
+Pirate.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Pirate.cpp.obj
+.PHONY : Pirate.cpp.obj
+
+Pirate.i: Pirate.cpp.i
+.PHONY : Pirate.i
+
+# target to preprocess a source file
+Pirate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Pirate.cpp.i
+.PHONY : Pirate.cpp.i
+
+Pirate.s: Pirate.cpp.s
+.PHONY : Pirate.s
+
+# target to generate assembly for a file
+Pirate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Pirate.cpp.s
+.PHONY : Pirate.cpp.s
+
+Queue.obj: Queue.cpp.obj
+.PHONY : Queue.obj
+
+# target to build an object file
+Queue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Queue.cpp.obj
+.PHONY : Queue.cpp.obj
+
+Queue.i: Queue.cpp.i
+.PHONY : Queue.i
+
+# target to preprocess a source file
+Queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Queue.cpp.i
+.PHONY : Queue.cpp.i
+
+Queue.s: Queue.cpp.s
+.PHONY : Queue.s
+
+# target to generate assembly for a file
+Queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Queue.cpp.s
+.PHONY : Queue.cpp.s
+
+Ship.obj: Ship.cpp.obj
+.PHONY : Ship.obj
+
+# target to build an object file
+Ship.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Ship.cpp.obj
+.PHONY : Ship.cpp.obj
+
+Ship.i: Ship.cpp.i
+.PHONY : Ship.i
+
+# target to preprocess a source file
+Ship.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Ship.cpp.i
+.PHONY : Ship.cpp.i
+
+Ship.s: Ship.cpp.s
+.PHONY : Ship.s
+
+# target to generate assembly for a file
+Ship.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Ship.cpp.s
+.PHONY : Ship.cpp.s
+
 main24b1.obj: main24b1.cpp.obj
 .PHONY : main24b1.obj
 
@@ -161,6 +281,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... my_executable
+	@echo ... Node.obj
+	@echo ... Node.i
+	@echo ... Node.s
+	@echo ... Pair.obj
+	@echo ... Pair.i
+	@echo ... Pair.s
+	@echo ... Pirate.obj
+	@echo ... Pirate.i
+	@echo ... Pirate.s
+	@echo ... Queue.obj
+	@echo ... Queue.i
+	@echo ... Queue.s
+	@echo ... Ship.obj
+	@echo ... Ship.i
+	@echo ... Ship.s
 	@echo ... main24b1.obj
 	@echo ... main24b1.i
 	@echo ... main24b1.s
