@@ -68,33 +68,33 @@ include CMakeFiles/my_executable.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/my_executable.dir/flags.make
 
-CMakeFiles/my_executable.dir/Pirate.cpp.obj: CMakeFiles/my_executable.dir/flags.make
-CMakeFiles/my_executable.dir/Pirate.cpp.obj: ../Pirate.cpp
-CMakeFiles/my_executable.dir/Pirate.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_executable.dir/Pirate.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/Pirate.cpp.obj -MF CMakeFiles\my_executable.dir\Pirate.cpp.obj.d -o CMakeFiles\my_executable.dir\Pirate.cpp.obj -c C:\wet1\Pirate.cpp
+CMakeFiles/my_executable.dir/Pair.cpp.obj: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/Pair.cpp.obj: ../Pair.cpp
+CMakeFiles/my_executable.dir/Pair.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_executable.dir/Pair.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/Pair.cpp.obj -MF CMakeFiles\my_executable.dir\Pair.cpp.obj.d -o CMakeFiles\my_executable.dir\Pair.cpp.obj -c C:\wet1\Pair.cpp
 
-CMakeFiles/my_executable.dir/Pirate.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Pirate.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\Pirate.cpp > CMakeFiles\my_executable.dir\Pirate.cpp.i
+CMakeFiles/my_executable.dir/Pair.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Pair.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\Pair.cpp > CMakeFiles\my_executable.dir\Pair.cpp.i
 
-CMakeFiles/my_executable.dir/Pirate.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Pirate.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Pirate.cpp -o CMakeFiles\my_executable.dir\Pirate.cpp.s
+CMakeFiles/my_executable.dir/Pair.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Pair.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Pair.cpp -o CMakeFiles\my_executable.dir\Pair.cpp.s
 
-CMakeFiles/my_executable.dir/Ship.cpp.obj: CMakeFiles/my_executable.dir/flags.make
-CMakeFiles/my_executable.dir/Ship.cpp.obj: ../Ship.cpp
-CMakeFiles/my_executable.dir/Ship.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_executable.dir/Ship.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/Ship.cpp.obj -MF CMakeFiles\my_executable.dir\Ship.cpp.obj.d -o CMakeFiles\my_executable.dir\Ship.cpp.obj -c C:\wet1\Ship.cpp
+CMakeFiles/my_executable.dir/Node.cpp.obj: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/Node.cpp.obj: ../Node.cpp
+CMakeFiles/my_executable.dir/Node.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_executable.dir/Node.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/Node.cpp.obj -MF CMakeFiles\my_executable.dir\Node.cpp.obj.d -o CMakeFiles\my_executable.dir\Node.cpp.obj -c C:\wet1\Node.cpp
 
-CMakeFiles/my_executable.dir/Ship.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Ship.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\Ship.cpp > CMakeFiles\my_executable.dir\Ship.cpp.i
+CMakeFiles/my_executable.dir/Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Node.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\Node.cpp > CMakeFiles\my_executable.dir\Node.cpp.i
 
-CMakeFiles/my_executable.dir/Ship.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Ship.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Ship.cpp -o CMakeFiles\my_executable.dir\Ship.cpp.s
+CMakeFiles/my_executable.dir/Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Node.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Node.cpp -o CMakeFiles\my_executable.dir\Node.cpp.s
 
 CMakeFiles/my_executable.dir/Queue.cpp.obj: CMakeFiles/my_executable.dir/flags.make
 CMakeFiles/my_executable.dir/Queue.cpp.obj: ../Queue.cpp
@@ -110,38 +110,52 @@ CMakeFiles/my_executable.dir/Queue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Queue.cpp.s"
 	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Queue.cpp -o CMakeFiles\my_executable.dir\Queue.cpp.s
 
-CMakeFiles/my_executable.dir/Node.cpp.obj: CMakeFiles/my_executable.dir/flags.make
-CMakeFiles/my_executable.dir/Node.cpp.obj: ../Node.cpp
-CMakeFiles/my_executable.dir/Node.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_executable.dir/Node.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/Node.cpp.obj -MF CMakeFiles\my_executable.dir\Node.cpp.obj.d -o CMakeFiles\my_executable.dir\Node.cpp.obj -c C:\wet1\Node.cpp
+CMakeFiles/my_executable.dir/Pirate.cpp.obj: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/Pirate.cpp.obj: ../Pirate.cpp
+CMakeFiles/my_executable.dir/Pirate.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_executable.dir/Pirate.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/Pirate.cpp.obj -MF CMakeFiles\my_executable.dir\Pirate.cpp.obj.d -o CMakeFiles\my_executable.dir\Pirate.cpp.obj -c C:\wet1\Pirate.cpp
 
-CMakeFiles/my_executable.dir/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Node.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\Node.cpp > CMakeFiles\my_executable.dir\Node.cpp.i
+CMakeFiles/my_executable.dir/Pirate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Pirate.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\Pirate.cpp > CMakeFiles\my_executable.dir\Pirate.cpp.i
 
-CMakeFiles/my_executable.dir/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Node.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Node.cpp -o CMakeFiles\my_executable.dir\Node.cpp.s
+CMakeFiles/my_executable.dir/Pirate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Pirate.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Pirate.cpp -o CMakeFiles\my_executable.dir\Pirate.cpp.s
 
-CMakeFiles/my_executable.dir/Pair.cpp.obj: CMakeFiles/my_executable.dir/flags.make
-CMakeFiles/my_executable.dir/Pair.cpp.obj: ../Pair.cpp
-CMakeFiles/my_executable.dir/Pair.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_executable.dir/Pair.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/Pair.cpp.obj -MF CMakeFiles\my_executable.dir\Pair.cpp.obj.d -o CMakeFiles\my_executable.dir\Pair.cpp.obj -c C:\wet1\Pair.cpp
+CMakeFiles/my_executable.dir/Ship.cpp.obj: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/Ship.cpp.obj: ../Ship.cpp
+CMakeFiles/my_executable.dir/Ship.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_executable.dir/Ship.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/Ship.cpp.obj -MF CMakeFiles\my_executable.dir\Ship.cpp.obj.d -o CMakeFiles\my_executable.dir\Ship.cpp.obj -c C:\wet1\Ship.cpp
 
-CMakeFiles/my_executable.dir/Pair.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Pair.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\Pair.cpp > CMakeFiles\my_executable.dir\Pair.cpp.i
+CMakeFiles/my_executable.dir/Ship.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/Ship.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\Ship.cpp > CMakeFiles\my_executable.dir\Ship.cpp.i
 
-CMakeFiles/my_executable.dir/Pair.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Pair.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Pair.cpp -o CMakeFiles\my_executable.dir\Pair.cpp.s
+CMakeFiles/my_executable.dir/Ship.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/Ship.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\Ship.cpp -o CMakeFiles\my_executable.dir\Ship.cpp.s
+
+CMakeFiles/my_executable.dir/pirates24b1.cpp.obj: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/pirates24b1.cpp.obj: ../pirates24b1.cpp
+CMakeFiles/my_executable.dir/pirates24b1.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/my_executable.dir/pirates24b1.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/pirates24b1.cpp.obj -MF CMakeFiles\my_executable.dir\pirates24b1.cpp.obj.d -o CMakeFiles\my_executable.dir\pirates24b1.cpp.obj -c C:\wet1\pirates24b1.cpp
+
+CMakeFiles/my_executable.dir/pirates24b1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/pirates24b1.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\wet1\pirates24b1.cpp > CMakeFiles\my_executable.dir\pirates24b1.cpp.i
+
+CMakeFiles/my_executable.dir/pirates24b1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/pirates24b1.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\wet1\pirates24b1.cpp -o CMakeFiles\my_executable.dir\pirates24b1.cpp.s
 
 CMakeFiles/my_executable.dir/main24b1.cpp.obj: CMakeFiles/my_executable.dir/flags.make
 CMakeFiles/my_executable.dir/main24b1.cpp.obj: ../main24b1.cpp
 CMakeFiles/my_executable.dir/main24b1.cpp.obj: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/my_executable.dir/main24b1.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/my_executable.dir/main24b1.cpp.obj"
 	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/main24b1.cpp.obj -MF CMakeFiles\my_executable.dir\main24b1.cpp.obj.d -o CMakeFiles\my_executable.dir\main24b1.cpp.obj -c C:\wet1\main24b1.cpp
 
 CMakeFiles/my_executable.dir/main24b1.cpp.i: cmake_force
@@ -154,27 +168,29 @@ CMakeFiles/my_executable.dir/main24b1.cpp.s: cmake_force
 
 # Object files for target my_executable
 my_executable_OBJECTS = \
+"CMakeFiles/my_executable.dir/Pair.cpp.obj" \
+"CMakeFiles/my_executable.dir/Node.cpp.obj" \
+"CMakeFiles/my_executable.dir/Queue.cpp.obj" \
 "CMakeFiles/my_executable.dir/Pirate.cpp.obj" \
 "CMakeFiles/my_executable.dir/Ship.cpp.obj" \
-"CMakeFiles/my_executable.dir/Queue.cpp.obj" \
-"CMakeFiles/my_executable.dir/Node.cpp.obj" \
-"CMakeFiles/my_executable.dir/Pair.cpp.obj" \
+"CMakeFiles/my_executable.dir/pirates24b1.cpp.obj" \
 "CMakeFiles/my_executable.dir/main24b1.cpp.obj"
 
 # External object files for target my_executable
 my_executable_EXTERNAL_OBJECTS =
 
+my_executable.exe: CMakeFiles/my_executable.dir/Pair.cpp.obj
+my_executable.exe: CMakeFiles/my_executable.dir/Node.cpp.obj
+my_executable.exe: CMakeFiles/my_executable.dir/Queue.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/Pirate.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/Ship.cpp.obj
-my_executable.exe: CMakeFiles/my_executable.dir/Queue.cpp.obj
-my_executable.exe: CMakeFiles/my_executable.dir/Node.cpp.obj
-my_executable.exe: CMakeFiles/my_executable.dir/Pair.cpp.obj
+my_executable.exe: CMakeFiles/my_executable.dir/pirates24b1.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/main24b1.cpp.obj
 my_executable.exe: CMakeFiles/my_executable.dir/build.make
 my_executable.exe: CMakeFiles/my_executable.dir/linklibs.rsp
 my_executable.exe: CMakeFiles/my_executable.dir/objects1.rsp
 my_executable.exe: CMakeFiles/my_executable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable my_executable.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\wet1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable my_executable.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\my_executable.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

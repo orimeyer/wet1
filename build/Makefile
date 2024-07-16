@@ -272,6 +272,30 @@ main24b1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main24b1.cpp.s
 .PHONY : main24b1.cpp.s
 
+pirates24b1.obj: pirates24b1.cpp.obj
+.PHONY : pirates24b1.obj
+
+# target to build an object file
+pirates24b1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/pirates24b1.cpp.obj
+.PHONY : pirates24b1.cpp.obj
+
+pirates24b1.i: pirates24b1.cpp.i
+.PHONY : pirates24b1.i
+
+# target to preprocess a source file
+pirates24b1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/pirates24b1.cpp.i
+.PHONY : pirates24b1.cpp.i
+
+pirates24b1.s: pirates24b1.cpp.s
+.PHONY : pirates24b1.s
+
+# target to generate assembly for a file
+pirates24b1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/pirates24b1.cpp.s
+.PHONY : pirates24b1.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -299,6 +323,9 @@ help:
 	@echo ... main24b1.obj
 	@echo ... main24b1.i
 	@echo ... main24b1.s
+	@echo ... pirates24b1.obj
+	@echo ... pirates24b1.i
+	@echo ... pirates24b1.s
 .PHONY : help
 
 

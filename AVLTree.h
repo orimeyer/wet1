@@ -14,25 +14,25 @@ private:
     }
 
     int height(AVLNode<K, T>* node) {
-        return (node == nullptr) ? 0 : node->height;
+        return (node == nullptr) ? 0 : node->getHeight();
     }
 
     int balanceFactor(AVLNode<K, T>* node) {
-        return (node == nullptr) ? 0 : height(node->left) - height(node->right);
+        return (node == nullptr) ? 0 : height(node->getLeft()) - height(node->getRight());
     }
 
     void updateHeight(AVLNode<K, T>* node) {
         if (node != nullptr) {
-            node->height = 1 + max(height(node->left), height(node->right));
+            node->setHeight(1 + max(height(node->getLeft()), height(node->getRight())));
         }
     }
 
     AVLNode<K, T>* rotateRight(AVLNode<K, T>* y) {
-        AVLNode<K, T>* x = y->left;
-        AVLNode<K, T>* T2 = x->right;
+        AVLNode<K, T>* x = y->getLeft();
+        AVLNode<K, T>* T2 = x->getRight();
 
-        x->right = y;
-        y->left = T2;
+        x->setRight(y);
+        y->setLeft(T2);
 
         updateHeight(y);
         updateHeight(x);
@@ -41,11 +41,11 @@ private:
     }
 
     AVLNode<K, T>* rotateLeft(AVLNode<K, T>* x) {
-        AVLNode<K, T>* y = x->right;
-        AVLNode<K, T>* T2 = y->left;
+        AVLNode<K, T>* y = x->getRight();
+        AVLNode<K, T>* T2 = y->getLeft();
 
-        y->left = x;
-        x->right = T2;
+        y->setLeft(x);
+        x->setRight(T2);
 
         updateHeight(x);
         updateHeight(y);
@@ -54,8 +54,8 @@ private:
     }
 
     AVLNode<K, T>* minValueNode(AVLNode<K, T>* node) {
-        while (node->left != nullptr) {
-            node = node->left;
+        while (node->getLeft() != nullptr) {
+            node = node->getLeft();
         }
         return node;
     }
@@ -65,10 +65,10 @@ private:
             return new AVLNode<K, T>(key, *data);
         }
 
-        if (key < node->key) {
-            node->left = insertNode(node->left, key, data);
-        } else if (key > node->key) {
-            node->right = insertNode(node->right, key, data);
+        if (key < node->getKey()) {
+            node->setLeft(insertNode(node->getLeft(), key, data));
+        } else if (key > node->getKey()) {
+            node->setRight(insertNode(node->getRight(), key, data));
         } else {
             // Duplicate keys are not allowed
             return node;
@@ -79,24 +79,24 @@ private:
         int balance = balanceFactor(node);
 
         // Left Left Case
-        if (balance > 1 && key < node->left->key) {
+        if (balance > 1 && key < node->getLeft()->getKey()) {
             return rotateRight(node);
         }
 
         // Right Right Case
-        if (balance < -1 && key > node->right->key) {
+        if (balance < -1 && key > node->getRight()->getKey()) {
             return rotateLeft(node);
         }
 
         // Left Right Case
-        if (balance > 1 && key > node->left->key) {
-            node->left = rotateLeft(node->left);
+        if (balance > 1 && key > node->getLeft()->getKey()) {
+            node->setLeft(rotateLeft(node->getLeft()));
             return rotateRight(node);
         }
 
         // Right Left Case
-        if (balance < -1 && key < node->right->key) {
-            node->right = rotateRight(node->right);
+        if (balance < -1 && key < node->getRight()->getKey()) {
+            node->setRight(rotateRight(node->getRight()));
             return rotateLeft(node);
         }
         number_of_nodes++;
@@ -108,13 +108,13 @@ private:
             return root;
         }
 
-        if (key < root->key) {
-            root->left = removeNode(root->left, key);
-        } else if (key > root->key) {
-            root->right = removeNode(root->right, key);
+        if (key < root->getKey()) {
+            root->setLeft(removeNode(root->getLeft(), key));
+        } else if (key > root->getKey()) {
+            root->setRight(removeNode(root->getRight(), key));
         } else {
-            if (root->left == nullptr || root->right == nullptr) {
-                AVLNode<K, T>* temp = root->left ? root->left : root->right;
+            if (root->getLeft() == nullptr || root->getRight() == nullptr) {
+                AVLNode<K, T>* temp = root->getLeft() ? root->getLeft() : root->getRight();
 
                 if (temp == nullptr) {
                     temp = root;
@@ -125,9 +125,9 @@ private:
 
                 delete temp;
             } else {
-                AVLNode<K, T>* temp = minValueNode(root->right);
-                root->key = temp->key;
-                root->right = removeNode(root->right, temp->key);
+                AVLNode<K, T>* temp = minValueNode(root->getRight());
+                root->setKey(temp->getKey());
+                root->setRight(removeNode(root->getRight(), temp->getKey()));
             }
         }
 
@@ -140,24 +140,24 @@ private:
         int balance = balanceFactor(root);
 
         // Left Left Case
-        if (balance > 1 && balanceFactor(root->left) >= 0) {
+        if (balance > 1 && balanceFactor(root->getLeft()) >= 0) {
             return rotateRight(root);
         }
 
         // Left Right Case
-        if (balance > 1 && balanceFactor(root->left) < 0) {
-            root->left = rotateLeft(root->left);
+        if (balance > 1 && balanceFactor(root->getLeft()) < 0) {
+            root->setLeft(rotateLeft(root->getLeft()));
             return rotateRight(root);
         }
 
         // Right Right Case
-        if (balance < -1 && balanceFactor(root->right) <= 0) {
+        if (balance < -1 && balanceFactor(root->getRight()) <= 0) {
             return rotateLeft(root);
         }
 
         // Right Left Case
-        if (balance < -1 && balanceFactor(root->right) > 0) {
-            root->right = rotateRight(root->right);
+        if (balance < -1 && balanceFactor(root->getRight()) > 0) {
+            root->setRight(rotateRight(root->getRight()));
             return rotateLeft(root);
         }
         number_of_nodes--;
@@ -165,13 +165,13 @@ private:
     }
 
     AVLNode<K, T>* findNode(AVLNode<K, T>* node, K key) const {
-        if (node == nullptr || node->key == key) {
+        if (node == nullptr || node->getKey() == key) {
             return node;
         }
-        if (key < node->key) {
-            return findNode(node->left, key);
+        if (key < node->getKey()) {
+            return findNode(node->getLeft(), key);
         }
-        return findNode(node->right, key);
+        return findNode(node->getRight(), key);
     }
 
     bool containsNode(AVLNode<K, T>* node, K key) const {
@@ -190,6 +190,8 @@ private:
 
     K getMaximumKey() const {
         AVLNode<K, T>* current = root;
+        if (current == nullptr)
+            throw "Tree is empty.";
 
         // Traverse to the rightmost node
         while (current->getRight() != nullptr) {
