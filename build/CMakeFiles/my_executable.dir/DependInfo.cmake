@@ -13,7 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/wet1/Pirate.cpp" "CMakeFiles/my_executable.dir/Pirate.cpp.obj" "gcc" "CMakeFiles/my_executable.dir/Pirate.cpp.obj.d"
   "C:/wet1/Queue.cpp" "CMakeFiles/my_executable.dir/Queue.cpp.obj" "gcc" "CMakeFiles/my_executable.dir/Queue.cpp.obj.d"
   "C:/wet1/Ship.cpp" "CMakeFiles/my_executable.dir/Ship.cpp.obj" "gcc" "CMakeFiles/my_executable.dir/Ship.cpp.obj.d"
-  "C:/wet1/main24b1.cpp" "CMakeFiles/my_executable.dir/main24b1.cpp.obj" "gcc" "CMakeFiles/my_executable.dir/main24b1.cpp.obj.d"
+  "C:/wet1/main.cpp" "CMakeFiles/my_executable.dir/main.cpp.obj" "gcc" "CMakeFiles/my_executable.dir/main.cpp.obj.d"
   "C:/wet1/pirates24b1.cpp" "CMakeFiles/my_executable.dir/pirates24b1.cpp.obj" "gcc" "CMakeFiles/my_executable.dir/pirates24b1.cpp.obj.d"
   )
 

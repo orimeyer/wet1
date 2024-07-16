@@ -7,13 +7,20 @@ public:
     // Constructor
     AVLNode(const K& k, const T& d) : key(k), data(new T(d)), left(nullptr), right(nullptr), height(1) {}
 
-    // Copy Constructor
-    AVLNode(const AVLNode& other) : key(other.key), data(new T(*(other.data))), left(nullptr), right(nullptr), height(other.height) {
-        if (other.left != nullptr) {
-            left = new AVLNode(*other.left);
-        }
-        if (other.right != nullptr) {
-            right = new AVLNode(*other.right);
+    // Copy constructor
+    AVLNode(const AVLNode& other) 
+        : key(other.key), data(other.data ? new T(*(other.data)) : nullptr), left(nullptr), right(nullptr), height(other.height) {
+        try {
+            if (other.left != nullptr) {
+                left = new AVLNode(*other.left);
+            }
+            if (other.right != nullptr) {
+                right = new AVLNode(*other.right);
+            }
+        } catch (...) {
+            delete left;
+            delete right;
+            throw; // Re-throw the exception after cleaning up
         }
     }
 

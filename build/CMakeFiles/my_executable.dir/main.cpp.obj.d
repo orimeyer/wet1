@@ -130,6 +130,6 @@ CMakeFiles/my_executable.dir/main.cpp.obj: C:\wet1\main.cpp \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/ostream.tcc \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/istream \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/istream.tcc \
- C:\wet1\Pirates24b1.h C:\wet1\wet1util.h C:\wet1\AVLTree.h \
+ C:\wet1\pirates24b1.h C:\wet1\wet1util.h C:\wet1\AVLTree.h \
  C:\wet1\AVLNode.h C:\wet1\Ship.h C:\wet1\Pair.h C:\wet1\Queue.h \
  C:\wet1\Node.h C:\wet1\Pirate.h

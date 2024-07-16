@@ -53,15 +53,14 @@ StatusType Ocean::add_pirate(int pirateId, int shipId, int treasure)
     Ship* its_ship = ships_tree.find(shipId)->getData();
     its_ship->getPiratesById().insert(pirateId, newPirate);
     int extra_to_sub = its_ship->getExtraCoins();
-    AVLTree<Pair, Pirate> PiratesByTreasure = its_ship->getPiratesByTreasure();
-    PiratesByTreasure.insert(Pair(pirateId, treasure - extra_to_sub), newPirate);
+    its_ship->getPiratesByTreasure().insert(Pair(pirateId, treasure - extra_to_sub), newPirate);
     its_ship->getPiratesByOrder().enqueue(pirateId);
     newPirate->setPointerToShip(its_ship);
     newPirate->setPointerToQueue(its_ship->getPiratesByOrder().getTail());
 	main_pirates_tree.insert(pirateId, newPirate);
     int num_pirates = its_ship->getNumOfPirates();
     its_ship->setNumOfPirates(num_pirates + 1);
-    its_ship->setReachest(PiratesByTreasure.getMaxKey().getId());
+    its_ship->setReachest(its_ship->getPiratesByTreasure().getMaxKey().getId());
 	return StatusType::SUCCESS;
 }
 
@@ -77,12 +76,11 @@ StatusType Ocean::remove_pirate(int pirateId)
     Ship* its_ship = pirate_to_delete->getPointerToShip();
     its_ship->getPiratesByOrder().removeNode(pirate_to_delete->getPointerToQueue());
     its_ship->getPiratesById().remove(pirateId);
-    AVLTree<Pair, Pirate> PiratesByTreasure = its_ship->getPiratesByTreasure();
     int its_treasure = pirate_to_delete->getTreasure();
-    PiratesByTreasure.remove(Pair(pirateId, its_treasure));
+    its_ship->getPiratesByTreasure().remove(Pair(pirateId, its_treasure));
     int num_pirates = its_ship->getNumOfPirates();
     its_ship->setNumOfPirates(num_pirates - 1);
-    its_ship->setReachest(PiratesByTreasure.getMaxKey().getId());
+    its_ship->setReachest(its_ship->getPiratesByTreasure().getMaxKey().getId());
     main_pirates_tree.remove(pirateId);
 	return StatusType::SUCCESS;
 }

@@ -9,6 +9,7 @@ private:
 public:
     // Constructor
     Pair(int id, int treasure);
+    Pair(const Pair& other);
 
     // Getters
     int getId() const;
@@ -17,6 +18,8 @@ public:
     // Setters
     void setId(int id);
     void setTreasure(int treasure);
+
+    Pair& operator=(const Pair& other);
 
     // Overloading the '>' operator
     bool operator>(const Pair& other) const;

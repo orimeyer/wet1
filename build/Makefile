@@ -248,29 +248,29 @@ Ship.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/Ship.cpp.s
 .PHONY : Ship.cpp.s
 
-main24b1.obj: main24b1.cpp.obj
-.PHONY : main24b1.obj
+main.obj: main.cpp.obj
+.PHONY : main.obj
 
 # target to build an object file
-main24b1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main24b1.cpp.obj
-.PHONY : main24b1.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-main24b1.i: main24b1.cpp.i
-.PHONY : main24b1.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-main24b1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main24b1.cpp.i
-.PHONY : main24b1.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-main24b1.s: main24b1.cpp.s
-.PHONY : main24b1.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-main24b1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main24b1.cpp.s
-.PHONY : main24b1.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 pirates24b1.obj: pirates24b1.cpp.obj
 .PHONY : pirates24b1.obj
@@ -320,9 +320,9 @@ help:
 	@echo ... Ship.obj
 	@echo ... Ship.i
 	@echo ... Ship.s
-	@echo ... main24b1.obj
-	@echo ... main24b1.i
-	@echo ... main24b1.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 	@echo ... pirates24b1.obj
 	@echo ... pirates24b1.i
 	@echo ... pirates24b1.s
