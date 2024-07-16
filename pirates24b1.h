@@ -22,6 +22,7 @@ class Ocean {
 private:
     AVLTree<int, Pirate> main_pirates_tree;
     AVLTree<int, Ship> ships_tree;
+    int min(int cannons, int pirates);
     
 public:
     // <DO-NOT-MODIFY> {
