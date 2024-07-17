@@ -116,11 +116,11 @@ StatusType Ocean::update_pirate_treasure(int pirateId, int change)
     int initial_treasure = pirate_to_update->getTreasure();
     pirate_to_update->setTreasure(initial_treasure + change);
     Ship* its_ship = pirate_to_update->getPointerToShip();
+    AVLTree<Pair, Pirate> treasure_tree = its_ship->getPiratesByTreasure();
     its_ship->getPiratesById().find(pirateId)->getData()->setTreasure(initial_treasure + change);
-    its_ship->getPiratesByTreasure().remove(Pair(pirateId, initial_treasure));
-    its_ship->getPiratesByTreasure().insert(Pair(pirateId, initial_treasure + change), pirate_to_update);
-    AVLTree<Pair, Pirate> PiratesByTreasure = its_ship->getPiratesByTreasure();
-    its_ship->setReachest(PiratesByTreasure.getMaxKey().getId());
+    treasure_tree.remove(Pair(pirateId, initial_treasure));
+    treasure_tree.insert(Pair(pirateId, initial_treasure + change), pirate_to_update);
+    its_ship->setReachest(treasure_tree.getMaxKey().getId());
     return StatusType::SUCCESS;
 }
 

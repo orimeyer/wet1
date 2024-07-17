@@ -107,7 +107,6 @@ private:
         if (root == nullptr) {
             return root;
         }
-
         if (key < root->getKey()) {
             root->setLeft(removeNode(root->getLeft(), key));
         } else if (key > root->getKey()) {
@@ -115,14 +114,12 @@ private:
         } else {
             if (root->getLeft() == nullptr || root->getRight() == nullptr) {
                 AVLNode<K, T>* temp = root->getLeft() ? root->getLeft() : root->getRight();
-
                 if (temp == nullptr) {
                     temp = root;
                     root = nullptr;
                 } else {
                     *root = *temp;
                 }
-
                 delete temp;
             } else {
                 AVLNode<K, T>* temp = minValueNode(root->getRight());
@@ -130,11 +127,9 @@ private:
                 root->setRight(removeNode(root->getRight(), temp->getKey()));
             }
         }
-
         if (root == nullptr) {
             return root;
         }
-
         updateHeight(root);
 
         int balance = balanceFactor(root);

@@ -8,6 +8,7 @@ private:
 
 public:
     // Constructor
+    Pair() : id(0), treasure(0) {}
     Pair(int id, int treasure);
     Pair(const Pair& other);
 

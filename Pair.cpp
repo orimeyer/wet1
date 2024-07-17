@@ -2,8 +2,10 @@
 
 // Constructor
 Pair::Pair(int id, int treasure) : id(id), treasure(treasure) {}
-
-Pair::Pair(const Pair& other) : id(other.id), treasure(other.treasure) {}
+Pair::Pair(const Pair& other) {
+    id = other.id;
+    treasure = other.treasure;
+}
 
 // Getters
 int Pair::getId() const {

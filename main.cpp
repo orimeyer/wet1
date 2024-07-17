@@ -15,6 +15,7 @@ int main() {
     std::cout << "Adding pirates...\n";
     ocean.add_pirate(101, 1, 50);
     ocean.add_pirate(102, 1, 20);
+    ocean.add_pirate(103, 1, 30);
     ocean.add_pirate(201, 2, 40);
     ocean.add_pirate(202, 2, 60);
     ocean.add_pirate(203, 2, 0);
@@ -24,8 +25,9 @@ int main() {
 
     // Test updating pirate's treasure
     std::cout << "Updating pirate's treasure...\n";
-    ocean.update_pirate_treasure(101, 20);
-    ocean.update_pirate_treasure(202, -10);
+    ocean.update_pirate_treasure(101, -20);
+    ocean.update_pirate_treasure(202, -20);
+    ocean.update_pirate_treasure(301, 20);
 
     // Test ships battle
     std::cout << "Ships battle...\n";
@@ -51,16 +53,16 @@ int main() {
 
     // Test get richest pirate of a ship
     std::cout << "Getting richest pirate of a ship...\n";
-    output_t<int> richest_pirate = ocean.get_richest_pirate(3);
+    output_t<int> richest_pirate = ocean.get_richest_pirate(1);
     if (richest_pirate.status() == StatusType::SUCCESS) {
-        std::cout << "Richest pirate of ship 3: " << richest_pirate.ans() << std::endl;
+        std::cout << "Richest pirate of ship 1: " << richest_pirate.ans() << std::endl;
     } else {
-        std::cout << "Failed to get richest pirate of ship 3.\n";
+        std::cout << "Failed to get richest pirate of ship 1.\n";
     }
 
     // Test treason
     std::cout << "Treason...\n";
-    ocean.treason(1, 3);
+    ocean.treason(1, 2);
 
     // Test removing pirate
     std::cout << "Removing pirate...\n";

@@ -5,7 +5,8 @@ template <typename K, typename T>
 class AVLNode {
 public:
     // Constructor
-    AVLNode(const K& k, const T& d) : key(k), data(new T(d)), left(nullptr), right(nullptr), height(1) {}
+    AVLNode(const K& k, const T& d) 
+        : key(k), data(new T(d)), left(nullptr), right(nullptr), height(1) {}
 
     // Copy constructor
     AVLNode(const AVLNode& other) 
@@ -28,27 +29,22 @@ public:
     AVLNode& operator=(const AVLNode& other) {
         if (this != &other) {
             key = other.key;
-            *data = *(other.data);
+            
+            if (data != nullptr) {
+                delete data;
+            }
+            data = other.data ? new T(*(other.data)) : nullptr;
             height = other.height;
             
-            // Recursively copy left and right nodes
             if (left != nullptr) {
-                delete left;
-            }
-            if (other.left != nullptr) {
-                left = new AVLNode(*other.left);
-            } else {
                 left = nullptr;
             }
+            left = other.left ? new AVLNode(*other.left) : nullptr;
             
             if (right != nullptr) {
-                delete right;
-            }
-            if (other.right != nullptr) {
-                right = new AVLNode(*other.right);
-            } else {
                 right = nullptr;
             }
+            right = other.right ? new AVLNode(*other.right) : nullptr;
         }
         return *this;
     }
@@ -87,6 +83,9 @@ public:
     }
 
     void setData(T* newData) {
+        if (data != nullptr) {
+            delete data;
+        }
         data = newData;
     }
 
@@ -111,3 +110,4 @@ private:
 };
 
 #endif // AVL_NODE_H
+
