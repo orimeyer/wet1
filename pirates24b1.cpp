@@ -30,7 +30,7 @@ StatusType Ocean::remove_ship(int shipId)
     if (shipId <= 0){
 		return StatusType::INVALID_INPUT;
 	}
-	if (!ships_tree.contains(shipId) || ships_tree.find(shipId)->getData()->getNumOfPirates() > 0){
+	if (ships_tree.isEmpty() || !ships_tree.contains(shipId) || ships_tree.find(shipId)->getData()->getNumOfPirates() > 0){
 		return StatusType::FAILURE;
 	}
 	ships_tree.remove(shipId);
