@@ -6,16 +6,31 @@ Ocean::Ocean()
     ships_tree = AVLTree<int, Ship>();
 }
 
+template <typename K, typename T>
+void deleteTreeNodes(AVLNode<K, T>* node) {
+    if (node == nullptr) {
+        return;
+    }
+
+    deleteTreeNodes(node->getLeft());   // Delete left subtree
+    deleteTreeNodes(node->getRight());  // Delete right subtree
+
+    node->setData(nullptr);  // Delete the data
+}
+
 Ocean::~Ocean() {
-    while (!ships_tree.isEmpty()){
-        while (!main_pirates_tree.isEmpty()){
+    // Delete all pirates
+    deleteTreeNodes(main_pirates_tree.getRoot());
+    // Delete all ships
+    deleteTreeNodes(ships_tree.getRoot());
+
+    while (!main_pirates_tree.isEmpty()){
         main_pirates_tree.remove(main_pirates_tree.getRoot()->getKey());
     }
     
-        ships_tree.getRoot()->getData()->setNumOfPirates(0);
+    while (!ships_tree.isEmpty()){
         ships_tree.remove(ships_tree.getRoot()->getKey());
     }
-    
 }
 
 StatusType Ocean::add_ship(int shipId, int cannons)
