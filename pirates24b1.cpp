@@ -6,7 +6,17 @@ Ocean::Ocean()
     ships_tree = AVLTree<int, Ship>();
 }
 
-Ocean::~Ocean() {}
+Ocean::~Ocean() {
+    while (!ships_tree.isEmpty()){
+        while (!main_pirates_tree.isEmpty()){
+        main_pirates_tree.remove(main_pirates_tree.getRoot()->getKey());
+    }
+    
+        ships_tree.getRoot()->getData()->setNumOfPirates(0);
+        ships_tree.remove(ships_tree.getRoot()->getKey());
+    }
+    
+}
 
 StatusType Ocean::add_ship(int shipId, int cannons)
 {

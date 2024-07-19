@@ -10,7 +10,13 @@ private:
 public:
     // Constructor
     Node(int data);
+    ~Node() = default;
 
+    Node(const Node& other);
+
+    // Assignment Operator
+    Node& operator=(const Node& other);
+    
     // Getters
     int getData() const;
     Node* getNext() const;

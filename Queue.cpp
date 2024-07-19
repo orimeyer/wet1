@@ -10,6 +10,18 @@ Queue::~Queue() {
     }
 }
 
+Node::Node(const Node& other) : data(other.data), next(other.next), prev(other.prev) {}
+
+// Assignment Operator
+Node& Node::operator=(const Node& other) {
+    if (this != &other) {
+        data = other.data;
+        next = other.next;
+        prev = other.prev;
+    }
+    return *this;
+}
+
 // Insert an element at the tail of the queue
 void Queue::enqueue(int value) {
     Node* newNode = new Node(value);

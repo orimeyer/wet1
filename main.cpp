@@ -10,6 +10,7 @@ int main() {
     ocean.add_ship(1, 10);
     ocean.add_ship(2, 15);
     ocean.add_ship(3, 20);
+    ocean.remove_ship(3);
 
     // Test adding pirates
     std::cout << "Adding pirates...\n";
@@ -24,7 +25,7 @@ int main() {
     ocean.add_pirate(302, 3, 80);
 
     // Test updating pirate's treasure
-    std::cout << "Updating pirate's treasure...\n";
+   /* std::cout << "Updating pirate's treasure...\n";
     ocean.update_pirate_treasure(101, -20);
     ocean.update_pirate_treasure(202, -20);
     ocean.update_pirate_treasure(301, 20);
@@ -70,7 +71,7 @@ int main() {
 
     // Test removing ship
     std::cout << "Removing ship...\n";
-    ocean.remove_ship(1);
+    ocean.remove_ship(1);  */
 
     return 0;
 }
