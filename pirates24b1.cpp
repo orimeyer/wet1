@@ -6,32 +6,7 @@ Ocean::Ocean()
     ships_tree = AVLTree<int, Ship>();
 }
 
-template <typename K, typename T>
-void deleteTreeNodes(AVLNode<K, T>* node) {
-    if (node == nullptr) {
-        return;
-    }
-
-    deleteTreeNodes(node->getLeft());   // Delete left subtree
-    deleteTreeNodes(node->getRight());  // Delete right subtree
-
-    node->setData(nullptr);  // Delete the data
-}
-
-Ocean::~Ocean() {
-    // Delete all pirates
-    deleteTreeNodes(main_pirates_tree.getRoot());
-    // Delete all ships
-    deleteTreeNodes(ships_tree.getRoot());
-
-    while (!main_pirates_tree.isEmpty()){
-        main_pirates_tree.remove(main_pirates_tree.getRoot()->getKey());
-    }
-    
-    while (!ships_tree.isEmpty()){
-        ships_tree.remove(ships_tree.getRoot()->getKey());
-    }
-}
+Ocean::~Ocean() {}
 
 StatusType Ocean::add_ship(int shipId, int cannons)
 {
@@ -141,11 +116,10 @@ StatusType Ocean::update_pirate_treasure(int pirateId, int change)
     int initial_treasure = pirate_to_update->getTreasure();
     pirate_to_update->setTreasure(initial_treasure + change);
     Ship* its_ship = pirate_to_update->getPointerToShip();
-    AVLTree<Pair, Pirate> treasure_tree = its_ship->getPiratesByTreasure();
     its_ship->getPiratesById().find(pirateId)->getData()->setTreasure(initial_treasure + change);
-    treasure_tree.remove(Pair(pirateId, initial_treasure));
-    treasure_tree.insert(Pair(pirateId, initial_treasure + change), pirate_to_update);
-    its_ship->setReachest(treasure_tree.getMaxKey().getId());
+    its_ship->getPiratesByTreasure().remove(Pair(pirateId, initial_treasure));
+    its_ship->getPiratesByTreasure().insert(Pair(pirateId, initial_treasure + change), pirate_to_update);
+    its_ship->setReachest(its_ship->getPiratesByTreasure().getMaxKey().getId());
     return StatusType::SUCCESS;
 }
 

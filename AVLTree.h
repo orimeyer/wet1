@@ -196,8 +196,17 @@ private:
         return current->getKey();
     }
 
+    void deleteTree(AVLNode<K, T>* node) {
+        if (node != nullptr) {
+            deleteTree(node->getLeft());
+            deleteTree(node->getRight());
+            delete node;
+        }
+    }
+
 public:
     AVLTree() : root(nullptr), number_of_nodes(0) {}
+    ~AVLTree(){deleteTree(root);}
 
     void insert(K key, T* data) {
         root = insertNode(root, key, data);

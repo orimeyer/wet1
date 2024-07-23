@@ -11,18 +11,12 @@ public:
     // Copy constructor
     AVLNode(const AVLNode& other) 
         : key(other.key), data(other.data ? new T(*(other.data)) : nullptr), left(nullptr), right(nullptr), height(other.height) {
-        try {
             if (other.left != nullptr) {
                 left = new AVLNode(*other.left);
             }
             if (other.right != nullptr) {
                 right = new AVLNode(*other.right);
             }
-        } catch (...) {
-            delete left;
-            delete right;
-            throw; // Re-throw the exception after cleaning up
-        }
     }
 
     // Assignment Operator
@@ -52,8 +46,10 @@ public:
     // Destructor
     ~AVLNode() {
         delete data;
-        delete left;
-        delete right;
+        if (left != nullptr)
+            left = nullptr;
+        if (right != nullptr)    
+            right = nullptr;
     }
 
     // Getters
@@ -83,9 +79,6 @@ public:
     }
 
     void setData(T* newData) {
-        if (data != nullptr) {
-            delete data;
-        }
         data = newData;
     }
 
