@@ -206,7 +206,10 @@ private:
 
 public:
     AVLTree() : root(nullptr), number_of_nodes(0) {}
-    ~AVLTree(){deleteTree(root);}
+    ~AVLTree(){
+        deleteTree(root);
+        root = nullptr;
+    }
 
     void insert(K key, T* data) {
         root = insertNode(root, key, data);

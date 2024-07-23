@@ -46,10 +46,15 @@ public:
     // Destructor
     ~AVLNode() {
         delete data;
-        if (left != nullptr)
+        data = nullptr;
+        if (left != nullptr){
             left = nullptr;
-        if (right != nullptr)    
+            delete left;
+        }
+        if (right != nullptr){    
             right = nullptr;
+            delete right;
+        }
     }
 
     // Getters

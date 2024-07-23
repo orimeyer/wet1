@@ -13,8 +13,9 @@ Ship::Ship(const Ship& other)
 
 // Destructor
 Ship::~Ship() {
-    // AVLTree destructors will be called automatically
-    // Queue destructor will be called automatically
+    pirates_by_id.~AVLTree();
+    pirates_by_treasure.~AVLTree();
+    pirates_by_order.~Queue();
 }
 
 // Getters
