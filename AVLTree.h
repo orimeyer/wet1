@@ -7,7 +7,6 @@ template <typename K, typename T>
 class AVLTree {
 private:
     AVLNode<K, T>* root;
-    int number_of_nodes;
 
     int max(int a, int b) {
         return (a > b) ? a : b;
@@ -99,7 +98,6 @@ private:
             node->setRight(rotateRight(node->getRight()));
             return rotateLeft(node);
         }
-        number_of_nodes++;
         return node;
     }
 
@@ -155,7 +153,6 @@ private:
             root->setRight(rotateRight(root->getRight()));
             return rotateLeft(root);
         }
-        number_of_nodes--;
         return root;
     }
 
@@ -205,7 +202,8 @@ private:
     }
 
 public:
-    AVLTree() : root(nullptr), number_of_nodes(0) {}
+    AVLTree() : root(nullptr) {}
+    
     ~AVLTree(){
         deleteTree(root);
         root = nullptr;
@@ -237,10 +235,6 @@ public:
 
     void setRoot(AVLNode<K, T>* newRoot) {
         root = newRoot;
-    }
-
-    int getNumberOfNodes() const {
-        return number_of_nodes;
     }
 
     K getMaxKey() const {

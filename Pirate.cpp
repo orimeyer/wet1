@@ -7,8 +7,8 @@ Pirate::Pirate(int pirateId, int shipId, int treasure)
 
 // Destructor
 Pirate::~Pirate() {
-    delete pointer_to_ship;
-    delete pointer_to_queue;
+    pointer_to_ship = nullptr;
+    pointer_to_queue = nullptr;
 }
 
 // Copy constructor
