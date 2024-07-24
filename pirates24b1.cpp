@@ -179,15 +179,18 @@ StatusType Ocean::ships_battle(int shipId1,int shipId2)
 	}
     Ship* ship1 = ships_tree.find(shipId1)->getData();
     Ship* ship2 = ships_tree.find(shipId2)->getData();
-    int min_ship1 = min(ship1->getCannons(), ship1->getNumOfPirates());
-    int min_ship2 = min(ship2->getCannons(), ship2->getNumOfPirates());
-    if (min_ship1 > min_ship2){
-        ship1->setExtraCoins(ship1->getExtraCoins() + ship2->getNumOfPirates());
-        ship2->setExtraCoins(ship2->getExtraCoins() - ship1->getNumOfPirates());
+    if (ship1->getNumOfPirates() != 0 && ship2->getNumOfPirates() != 0){
+        int min_ship1 = min(ship1->getCannons(), ship1->getNumOfPirates());
+        int min_ship2 = min(ship2->getCannons(), ship2->getNumOfPirates());
+        if (min_ship1 > min_ship2){
+            ship1->setExtraCoins(ship1->getExtraCoins() + ship2->getNumOfPirates());
+            ship2->setExtraCoins(ship2->getExtraCoins() - ship1->getNumOfPirates());
+        }
+        if (min_ship1 < min_ship2){
+            ship1->setExtraCoins(ship1->getExtraCoins() - ship2->getNumOfPirates());
+            ship2->setExtraCoins(ship2->getExtraCoins() + ship1->getNumOfPirates());
+        }
     }
-    if (min_ship1 < min_ship2){
-        ship1->setExtraCoins(ship1->getExtraCoins() - ship2->getNumOfPirates());
-        ship2->setExtraCoins(ship2->getExtraCoins() + ship1->getNumOfPirates());
-    }
+    
     return StatusType::SUCCESS;
 }

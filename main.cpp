@@ -16,6 +16,7 @@ int main() {
     ocean.add_pirate(101, 1, 50);
     ocean.add_pirate(102, 1, 20);
     ocean.add_pirate(103, 1, 30);
+    ocean.ships_battle(1, 2);
     ocean.add_pirate(201, 2, 40);
     ocean.add_pirate(202, 2, 60);
 
