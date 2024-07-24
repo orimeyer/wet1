@@ -197,13 +197,13 @@ private:
         if (node != nullptr) {
             deleteTree(node->getLeft());
             deleteTree(node->getRight());
-            delete node;
+            delete(node);
         }
     }
 
 public:
     AVLTree() : root(nullptr) {}
-    
+
     ~AVLTree(){
         deleteTree(root);
         root = nullptr;

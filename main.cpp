@@ -9,6 +9,7 @@ int main() {
     std::cout << "Adding ships...\n";
     ocean.add_ship(1, 10);
     ocean.add_ship(2, 15);
+    ocean.add_ship(3, 20);
 
     // Test adding pirates
     std::cout << "Adding pirates...\n";

@@ -126,10 +126,10 @@ StatusType Ocean::update_pirate_treasure(int pirateId, int change)
 output_t<int> Ocean::get_treasure(int pirateId)
 {
     if (pirateId <= 0){
-		return StatusType::INVALID_INPUT;
+		return output_t<int>(StatusType::INVALID_INPUT);
 	}
 	if (main_pirates_tree.isEmpty() || !main_pirates_tree.contains(pirateId)){
-		return StatusType::FAILURE;
+		return output_t<int>(StatusType::FAILURE);
 	}
     Pirate* selected_pirate = main_pirates_tree.find(pirateId)->getData();
     Ship* its_ship = selected_pirate->getPointerToShip();
@@ -139,10 +139,10 @@ output_t<int> Ocean::get_treasure(int pirateId)
 output_t<int> Ocean::get_cannons(int shipId)
 {
     if (shipId <= 0){
-		return StatusType::INVALID_INPUT;
+		return output_t<int>(StatusType::INVALID_INPUT);
 	}
 	if (ships_tree.isEmpty() || !ships_tree.contains(shipId)){
-		return StatusType::FAILURE;
+		return output_t<int>(StatusType::FAILURE);
 	}
     return output_t<int>(ships_tree.find(shipId)->getData()->getCannons());
 }
@@ -150,14 +150,14 @@ output_t<int> Ocean::get_cannons(int shipId)
 output_t<int> Ocean::get_richest_pirate(int shipId)
 {
     if (shipId <= 0){
-		return StatusType::INVALID_INPUT;
+		return output_t<int>(StatusType::INVALID_INPUT);
 	}
 	if (ships_tree.isEmpty() || !ships_tree.contains(shipId)){
-		return StatusType::FAILURE;
+		return output_t<int>(StatusType::FAILURE);
 	}
     Ship* its_ship = ships_tree.find(shipId)->getData();
     if (its_ship->getNumOfPirates() == 0){
-        return StatusType::FAILURE;
+        return output_t<int>(StatusType::FAILURE);
     }
     return output_t<int>(its_ship->getReachest());
 }
